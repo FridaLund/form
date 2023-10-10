@@ -4,20 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Formulär</title>
   </head>
   <body>
+    <div class="logo">
+      <img src="circleK_logo.png" alt="circleK_logo" height="30" />
+    </div>
+    <br />
     <h1>Biluthyrning</h1>
-    <h2>Välj först: Vad vill du hyra?</h2>
-    <p>-radioknappar med val av bil-</p>
-    <h2>Välj sen: Län</h2>
-    <h2>Har du läst villkoren?</h2>
-    <h2>Logga in</h2>
-    <form action="https://httpbin.org/anything" method="post">
-      <input name="First Name" type="text" />
-      <input name="Last Name" type="text" />
-      <input name="password" />
-      <button type="submit">Skicka</button>
-    </form>
+    <div class="myGrid">
+      <form action="https://httpbin.org/anything" method="post">
+        <div class="carContainer">
+          <div class="rent">
+            <h2>Välj först: Vad vill du hyra?</h2>
+            <input type="radio" name="car" id="car" />
+            <label for="car">Bil</label> <br />
+            <input type="radio" name="truck" id="truck" />
+            <label for="truck">Lastbil</label> <br />
+            <input type="radio" name="trailer" id="trailer" />
+            <label for="trailer">Släpvagn</label> <br />
+            <input type="radio" name="other" id="other" />
+            <label for="other">Övrigt</label>
+          </div>
+
+          <div class="county">
+            <h2>Välj sen: Län</h2>
+            <select name="county" id="countySelect">
+              <option value="">Välj ett län</option>
+              <option value="Blekinge">Blekinge Län</option>
+              <option value="Dalarna">Dalarnas Län</option>
+              <option value="Gotland">Gotlands Län</option>
+              <option value="Halland">Hallands Län</option>
+              <option value="Jämtland">Jämtlands Län</option>
+              <option value="Kalmar">Kalmar Län</option>
+              <option value="Malmö">Malmöområdet</option>
+              <option value="Norrbotten">Norrbottens Län</option>
+              <option value="Stockholm">Stockholms Län</option>
+              <option value="Uppsala">Uppsala Län</option>
+              <option value="Östergötland">Östergötlands Län</option>
+            </select>
+          </div>
+
+          <div class="conditions">
+            <h2>Vem ska köra bilen?</h2>
+            <input type="checkbox" name="me" id="answerMe" />
+            <label for="me">Jag själv</label> <br />
+            <input type="checkbox" name="notme" id="answerNotme" />
+            <label for="notme">Någon annan</label>
+          </div>
+
+          <div class="time">
+            <div class="pickup">
+              <h2>Hämtas:</h2>
+            </div>
+            <div class="leave">
+              <h2>Lämnas:</h2>
+            </div>
+          </div>
+
+          <div class="formContainer">
+            <h2>Registrera dig</h2>
+
+            <div class="fName">
+              <label for="fName">First name:</label>
+              <input type="text" id="fName" name="First Name" required />
+            </div>
+            <br />
+            <div class="lName">
+              <label for="lName">Last name:</label>
+              <input type="text" id="lName" name="Last Name" required />
+            </div>
+            <br />
+            <div class="eMail">
+              <label for="eMail">E-mail:</label>
+              <input type="email" id="eMail" name="email" required />
+            </div>
+            <br />
+            <div class="pWord">
+              <label for="pWord">Password:</label>
+              <input type="password" id="pWord" name="password" required />
+            </div>
+            <br />
+            <button type="submit">Skicka</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
