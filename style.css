@@ -1,77 +1,100 @@
-body,
-html {
-  font-family: "Arial Narrow", Arial, sans-serif;
-  margin: 0;
+.bigContainer {
+  display: flex;
+  justify-content: center;
 }
 
-.logo {
-  float: left;
-  padding-left: 1%;
+.container {
+  width: 50vh;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
 }
 
 .myGrid {
   display: grid;
   place-content: center;
-  height: 140vh;
-  width: 100vh;
+  padding-right: 5%;
+  width: 300px;
+}
+
+.logo {
+  padding-left: 2%;
 }
 
 h1 {
-  background-color: orange;
+  background-color: rgb(232, 155, 13);
   color: rgb(255, 255, 255);
-  width: 50vh;
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 1%;
+  width: 400px;
+  height: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  display: grid;
+  place-content: center;
 }
 
-.carContainer {
-  background-color: rgb(180, 179, 179);
-  height: 90%;
-  width: 200%;
-  padding: 30px;
-  border-radius: 5px;
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.rentContainer {
+  background-color: rgb(199, 199, 199);
+  width: 700px;
+  padding: 10px;
 }
 
 input[type="radio"] {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  outline: none;
-  border: 1px solid red;
 }
 
-input[type="radio"]:checked {
-  background-color: red;
-}
-
-select {
-  background-repeat: no-repeat;
-  background-position: right 4px center;
-  width: 100%;
-}
-
-.formContainer form {
+.dateTimeContainer {
   display: grid;
-  grid-template-columns: 300px 300px;
-  gap: 30px;
+  grid-template-columns: 50px 50px;
+  gap: 300px;
+}
+
+.pickUp {
+  display: grid;
+  gap: 5px;
+}
+
+.dropOff {
+  display: grid;
+  gap: 5px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 320px;
+  height: 30px;
+  background-color: rgb(236, 236, 236);
+  border: solid rgb(151, 151, 151);
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  column-gap: 125px;
 }
 
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  outline: none;
-  border: 1px solid red;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
 select {
-  width: 100%;
+  width: 71%;
+  height: 30px;
   padding: 5px;
-  border: 1px solid red;
   box-sizing: border-box;
-  border-radius: 5px;
+  background-color: rgb(236, 236, 236);
+  border: solid rgb(151, 151, 151);
 }
